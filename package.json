@@ -74,6 +74,8 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.0",
+    "cross": "^1.0.0",
+    "cross-env": "^10.1.0",
     "eslint": "^9.16.0",
     "eslint-plugin-compat": "^6.0.1",
     "rollup": "^4.24.0",
@@ -91,7 +93,7 @@
   "scripts": {
     "install:components": "node scripts/copy-components.js",
     "start": "node server.js",
-    "dev": "DEV=1 node server.js",
+    "dev": "cross-env DEV=1 node server.js",
     "windev": "set DEV=1& node server.js",
     "fresh": "FRESH=1 node server.js",
     "offline": "FRESH=1 OFFLINE=1 node server.js",
